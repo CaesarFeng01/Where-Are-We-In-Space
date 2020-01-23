@@ -1,4 +1,4 @@
-Where Are We In Space?
+Where Are We In Space? 🚀
 
 Web app that displays the real-time location of the ISS, the statistics of the ISS, and the astronauts currently in space.
 
