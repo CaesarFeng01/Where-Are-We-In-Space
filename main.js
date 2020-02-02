@@ -66,4 +66,28 @@
             getPeople();
 
             setInterval(getISS, 1000);  
+
+            const intro = document.querySelector(".intro");
+            const title = document.querySelector("#title");
+            const stats = document.querySelector("#statistics-wrapper");
+
+            intro.addEventListener("mouseover", (e) => {
+                document.querySelector('section').classList.add('content-highlight');
+            });
+
+            intro.addEventListener("mouseout", (e) => {
+                document.querySelector('section').classList.remove('content-highlight');
+            })
+
+            title.addEventListener("mouseover", (e) => {
+                document.querySelector('header').classList.add('title-emphasize');
+            })
+
+            title.addEventListener("mouseout", (e) => {
+                document.querySelector('header').classList.remove('title-emphasize');
+            })
+
+            stats.addEventListener("mouseover", (e) => {
+                document.querySelector('p').classList.add('stat-emp');
+            })
         
