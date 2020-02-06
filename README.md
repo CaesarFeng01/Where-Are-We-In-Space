@@ -6,6 +6,8 @@ Retrieves data from various APIs (https://api.wheretheiss.at/v1/satellites/25544
 
 Obtains map and marker from Leaflet.js library.
 
+Uses jQuery and JS for animations.
+
 Utilizes CSS Grid, Flexbox, and HTML5 for the layout and design.
 
 
