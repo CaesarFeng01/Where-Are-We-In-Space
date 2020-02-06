@@ -32,15 +32,24 @@
 
                 marker.setLatLng([latitude, longitude]);
 
+                
+                $("#center-button").click(() => {
+                    initialize = true;
+                });
+
+
                 if (initialize) {
                     mymap.setView([latitude, longitude], 3);
                     initialize = false;
                 }
+
                 
-                document.getElementById('lat').textContent = latitude.toFixed(2);
-                document.getElementById('lon').textContent = longitude.toFixed(2);
-                document.getElementById('alt').textContent = altitude.toFixed(2);
-                document.getElementById('vel').textContent = velocity.toFixed(2);
+                
+                
+                document.querySelector('#lat').textContent = latitude.toFixed(2);
+                document.querySelector('#lon').textContent = longitude.toFixed(2);
+                document.querySelector('#alt').textContent = altitude.toFixed(2);
+                document.querySelector('#vel').textContent = velocity.toFixed(2);
             }
 
             async function getPeople() {
@@ -90,4 +99,6 @@
             stats.addEventListener("mouseover", (e) => {
                 document.querySelector('p').classList.add('stat-emp');
             })
+
+            
         
