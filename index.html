@@ -17,6 +17,8 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
 
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
   
         <title>Fetch JSON from API and map lat lon</title>
     </head>
@@ -36,7 +38,7 @@
 
             <div class="content-wrapper">
                 <div class="intro">
-                    <section>
+                    <section id="content">
                         Welcome to my web app, "Where Are We In Space?".
                         This application retrieves data from various
                         API's, converts the data to a JSON format,
@@ -51,14 +53,14 @@
                 <div class="body-content-wrapper">
                     <div id="issMap"></div>
                     <div id="statistics-wrapper">
-                        <header id='stat-header'>Live Stats of the ISS</header>
+                        <header id="stat-header">Live Stats of the ISS</header>
                         <p>Latitude: <span id="lat"></span>°<br>
                             Longitude: <span id="lon"></span>°<br>
                             Altitude: <span id="alt"></span> miles<br>
                             Velocity: <span id="vel"></span> mph
                             </p>
 
-                        <header>Who is on the ISS right now?</header>
+                        <header id="astro-header">Who is on the ISS right now?</header>
                         <p id="people-in-space"></p>
                     </div>
                 </div>
@@ -72,11 +74,27 @@
             </div>
         </div>
     </body>
+
+    <script>
+        $("#statistics-wrapper").hover(() => {
+           $("#stat-header, #astro-header").addClass('stat-emp');
+        }, () => {
+            $("#stat-header, #astro-header").removeClass('stat-emp');
+        });   
+
+        $(".left").hover(() => {
+            $("#title").addClass('title-emphasize');
+        }, () => {
+            $("#title").removeClass('title-emphasize');
+        });
+
+        $(".intro").hover(() => {
+            $("#content").addClass('content-highlight');
+        }, () => {
+            $("#content").removeClass('content-highlight');
+        });
+    </script>
+
     <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    
 </html>
-
-
-
-
-
